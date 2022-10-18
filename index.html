@@ -4,33 +4,63 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momentum</title>
-  <link rel="stylesheet" href="style.css">
+  <title>SENSBOX_MOMENTUM</title>
+  <link rel="stylesheet" href="css/style_momentum.css">
 </head>
 <body>
-  <h2 id="clock">00:00:00</h2>
-  <h1 class="hidden" id="greeting"></h1>
-  <form class="hidden" id="form">
-    <input required maxlength="10" type="text" placeholder="이름이 무엇입니까?"/>
-    <input class="login_btn" type="submit" value="로그인"/>
-  </form>
-  <form id="todo_form">
-    <input type="text" required placeholder="오늘의 할일을 추가하기">
-  </form>
-  <ul id="todo_list"></ul>
-  <div id="quotes">
-    <span class="ko"></span>
-    <span class="en"></span>
+  <header>
+    <h1>
+      <a href="index.html">
+        <img src="images/logo_dark.png" alt="sensbox">
+      </a>
+    </h1>
+    <div id="greetings_weather">
+      <div id="greetings" class="hidden">
+        <span>Good morning, 김지우님</span>
+      </div>
+      <div id="weather">
+        <span id="city"></span>
+        <span id="temp"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="time_cont">
+    <span id="date">0000년 0월 0일 월요일</span>
+    <h2>
+      <span id="noon">오전</span>
+      <span id="clock">00:00</span>
+    </h2>
   </div>
-  <div id="weather">
-    <span></span>
-    <span></span>
+
+  <!-- <div id="clock">
+    <span>1월 1일 금요일</span>
+    <h3>12:00</h3>
+  </div> -->
+  <form id="login_form" class="">
+    <input class="name" type="text" placeholder="이름을 입력해주세요 ." required maxlength="15">
+    <input class="login" type="submit" value="LOGIN">
+  </form>
+  <div id="greetings" class="hidden">Good morning, 김지우님</div>
+  <div id="todo">
+    <h4>To do List</h4>
+    <form id="todo_form">
+      <input type="text" required placeholder="오늘의 할 일을 입력해주세요">
+    </form>
+    <ul class="todolist">
+    </ul>
   </div>
-  <script src="js/greetings.js"></script>
+  <div id="today_quotes">
+    <em class="quotes_en"></em>
+    <span class="quotes_ko"></span>
+  </div>
+  <a href="#none" class="logout_btn hidden">로그아웃</a>
+  <div id="bg"></div>
   <script src="js/clock.js"></script>
+  <script src="js/greetings.js"></script>
+  <script src="js/todo.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/background.js"></script>
-  <script src="js/todo.js"></script>
   <script src="js/weather.js"></script>
 </body>
 </html>
