@@ -41,6 +41,8 @@ function ampm(hours){
 function hour(hours){
   if(hours > 12){
     return (hours - 12);
+  } else{
+    return hours;
   }
 }
 function onClock(){
