@@ -55,6 +55,6 @@ function onClock(){
   noon.innerText = ampm(hours);
 }
 
-todayDate.innerText = `${year}년 ${month}월 ${date}일 ${dayName[dayNum]}요일`;
+todayDate.innerText = `${year}년 ${month}월~ ${date}일 ${dayName[dayNum]}요일`;
 onClock();
 setInterval(onClock, 1000);
